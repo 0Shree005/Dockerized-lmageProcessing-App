@@ -1,28 +1,21 @@
-import numpy as np
-import cv2
+import cv2 
+from matplotlib import pyplot as plt
 
-img = cv2.imread("assets/Cars.jpeg", 0)
-img = cv2.resize(img, (0, 0), fx=0.5, fy=0.5)
-template = cv2.imread("assets/singleCar.jpg", 0)
-template = cv2.resize(template, (0, 0), fx=0.5, fy=0.5)
+img = cv2.imread('assets/highway.jpg')
 
-height, width = template.shape
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img_rbg = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-methods = [cv2.TM_CCOEFF, cv2.TM_CCOEFF_NORMED, cv2.TM_CCORR, cv2.TM_CCORR_NORMED, cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]
+stop_data = cv2.CascadeClassifier('xml_file/haarcascade_car.xml')
 
-for method in methods:
-    img2 = img.copy()
+found = stop_data.detectMultiScale(img_gray, minSize =(20, 20))
 
-    result = cv2.matchTemplate(img2, template, method)
-    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-    if method in [cv2.TM_SQDIFF, cv2.TM_SQDIFF_NORMED]:
-        location = min_loc
-    else:
-        location = max_loc
-    
-    boottom_right = (location[0] + width, location[1] + height)
-    cv2.rectangle(img2, location, boottom_right, 255, 5)
+amount_found = len(found)
 
-    cv2.imshow("Match", img2)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+if amount_found != 0:
+    for (x, y, width, height) in found:
+        cv2.rectangle(img_rbg, (x, y), (x + height, y + width), (0, 0, 255), 5)
+
+plt.subplot(1, 1, 1)
+plt.imshow(img_rbg)
+plt.show()
