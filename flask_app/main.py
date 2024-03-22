@@ -1,12 +1,15 @@
-from flask import Flask
+import cv2
 
-app = Flask(__name__)
+img = cv2.imread('assets/cars_on_road.jpeg', 1)
 
-@app.route('/')
-def hello():
-    return 'Hello, World!'
+resizeImg = cv2.resize(img, (0, 0), fx= 0.5, fy= 0.5)
+
+rotateImg = cv2.rotate(resizeImg, cv2.ROTATE_180)
 
 
+# cv2.imwrite('assets/modified_image.jpg', rotateImg)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+cv2.imshow('Image', rotateImg)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
