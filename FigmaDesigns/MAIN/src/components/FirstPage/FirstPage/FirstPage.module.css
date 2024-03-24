@@ -8,6 +8,15 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+.linkText a {
+  color: white;
+  text-decoration: none;
+}
+.linkText a:active {
+  color: #033137;
+}
+
+
 .frame9 {
   position: absolute;
   left: 120px;
@@ -174,4 +183,9 @@
   align-items: center;
   white-space: nowrap;
   flex-direction: column;
+  text-decoration: none;
 }
+
+.uploadImage:active {
+    color: #033137;
+  }

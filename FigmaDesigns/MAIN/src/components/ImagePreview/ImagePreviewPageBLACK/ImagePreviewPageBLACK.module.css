@@ -8,6 +8,13 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+.linkText a {
+  color: white;
+  text-decoration: none;
+}
+.linkText a:active {
+  color: #033137;
+}
 .frame9 {
   position: absolute;
   left: 120px;

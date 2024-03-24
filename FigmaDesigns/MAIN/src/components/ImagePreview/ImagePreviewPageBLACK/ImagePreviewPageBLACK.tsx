@@ -28,12 +28,12 @@ export const ImagePreviewPageBLACK: FC<Props> = memo(function ImagePreviewPageBL
         <div className={classes.frame2}>
           <div className={classes.frame3}>
             <div className={classes.dockerisedImageProcessing}>
-            <div className={classes.textBlock}>
+            <div className={`${classes.textBlock} ${classes.linkText}`}>
               <Link to="/dockerised-image-processing">
                 Dockerised
               </Link>
             </div>
-            <div className={classes.textBlock2}>
+            <div className={`${classes.textBlock2} ${classes.linkText}`}>
               <Link to="/image-processing">
                 Image Processing
               </Link>
@@ -42,20 +42,20 @@ export const ImagePreviewPageBLACK: FC<Props> = memo(function ImagePreviewPageBL
             <div className={classes.dockerOPBlob}></div>
           </div>
           <div className={classes.frame1}>
-          <div className={classes.imageInput}>
+          <div className={`${classes.imageInput} ${classes.linkText}`}>
           <Link to="/image-input">
             Image Input
           </Link>
         </div>
-            <div className={classes.imageInputBlob}></div>
+          <div className={classes.imageInputBlob}></div>
           </div>
           <div className={classes.frame4}>
-          <div className={classes.detectionOutput}>
-          <Link to="/detection-output">
-            Detection Output
-          </Link>
-        </div>
-            <div className={classes.detectionOPBlob}></div>
+          <div className={`${classes.detectionOutput} ${classes.linkText}`}>
+            <Link to="/detection-output">
+              Detection Output
+            </Link>
+          </div>
+          <div className={classes.detectionOPBlob}></div>
           </div>
         </div>
         <div className={classes.frame12}>

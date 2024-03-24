@@ -20,12 +20,12 @@ export const SecondDetectionResultPageBLACK: FC<Props> = memo(function SecondDet
       <div className={classes.frame2}>
         <div className={classes.frame3}>
           <div className={classes.dockerisedImageProcessing}>
-          <div className={classes.textBlock}>
+          <div className={`${classes.textBlock} ${classes.linkText}`}>
               <Link to="/dockerised-image-processing">
                 Dockerised
               </Link>
             </div>
-            <div className={classes.textBlock2}>
+            <div className={`${classes.textBlock2} ${classes.linkText}`}>
               <Link to="/image-processing">
                 Image Processing
               </Link>
@@ -34,7 +34,7 @@ export const SecondDetectionResultPageBLACK: FC<Props> = memo(function SecondDet
           <div className={classes.dockerOPBlob}></div>
         </div>
         <div className={classes.frame1}>
-        <div className={classes.imageInput}>
+        <div className={`${classes.imageInput} ${classes.linkText}`}>
           <Link to="/image-input">
             Image Input
           </Link>
@@ -42,7 +42,7 @@ export const SecondDetectionResultPageBLACK: FC<Props> = memo(function SecondDet
           <div className={classes.imageInputBlob}></div>
         </div>
         <div className={classes.frame4}>
-        <div className={classes.detectionOutput}>
+        <div className={`${classes.detectionOutput} ${classes.linkText}`}>
           <Link to="/detection-output">
             Detection Output
           </Link>
