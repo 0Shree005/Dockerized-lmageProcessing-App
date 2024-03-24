@@ -1,6 +1,7 @@
-import { memo, useRef } from 'react';
+import { memo, useRef, useEffect } from 'react';
 import React, { useState } from 'react';
 import type { FC } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 import resets from '../../_resets.module.css';
 import classes from './FirstPage.module.css';
@@ -9,11 +10,19 @@ import { ImagePreviewPageBLACK } from '../../ImagePreview/ImagePreviewPageBLACK/
 
 interface Props {
   className?: string;
-  setImageData: (imageData: string | null) => void; // Add this line
+  imageData: string | null;
+  setImageData: React.Dispatch<React.SetStateAction<string | null>>;
+  setImageFile: React.Dispatch<React.SetStateAction<File | null>>;
 }
-
-export const FirstPage: FC<Props> = memo(function FirstPage({ setImageData }) {
+export const FirstPage: FC<Props> = memo(function FirstPage({ imageData, setImageData, setImageFile }) {
   const inputElement = useRef<HTMLInputElement>(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!imageData) {
+      navigate('/dockerised-image-processing');
+    }
+  }, [imageData, navigate]);
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files.length > 0) {
@@ -21,6 +30,8 @@ export const FirstPage: FC<Props> = memo(function FirstPage({ setImageData }) {
       const reader = new FileReader();
       reader.onloadend = () => {
         setImageData(reader.result as string);
+        setImageFile(file); // Set imageFile state here
+        alert("Switch to Detection Output, your result is ready");
       };
       reader.readAsDataURL(file);
     }
@@ -32,17 +43,33 @@ export const FirstPage: FC<Props> = memo(function FirstPage({ setImageData }) {
       <div className={classes.frame2}>
         <div className={classes.frame3}>
           <div className={classes.dockerisedImageProcessing}>
-            <div className={classes.textBlock}>Dockerised </div>
-            <div className={classes.textBlock2}>Image Processing </div>
+            <div className={classes.textBlock}>
+              <Link to="/dockerised-image-processing">
+                Dockerised
+              </Link>
+            </div>
+            <div className={classes.textBlock2}>
+              <Link to="/image-processing">
+                Image Processing
+              </Link>
+            </div>
           </div>
           <div className={classes.dockerOPBlob}></div>
         </div>
         <div className={classes.frame1}>
-          <div className={classes.imageInput}>Image Input</div>
+        <div className={classes.imageInput}>
+          <Link to="/image-input">
+            Image Input
+          </Link>
+        </div>
           <div className={classes.imageInputBlob}></div>
         </div>
         <div className={classes.frame4}>
-          <div className={classes.detectionOutput}>Detection Output</div>
+        <div className={classes.detectionOutput}>
+          <Link to="/detection-output">
+            Detection Output
+          </Link>
+        </div>
           <div className={classes.detectionOPBlob}></div>
         </div>
       </div>

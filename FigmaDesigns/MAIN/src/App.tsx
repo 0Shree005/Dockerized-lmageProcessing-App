@@ -1,20 +1,53 @@
-import { memo, useState } from 'react';
-import type { FC } from 'react';
-
-import classes from './App.module.css';
-import resets from './components/_resets.module.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { FirstPage } from './components/FirstPage/FirstPage/FirstPage';
-import { ImagePreviewPageBLACK } from './components/ImagePreview/ImagePreviewPageBLACK/ImagePreviewPageBLACK';
 import { SecondDetectionResultPageBLACK } from './components/DetectionOutput/SecondDetectionResultPageBLACK/SecondDetectionResultPageBLACK';
+import { ImagePreviewPageBLACK } from './components/ImagePreview/ImagePreviewPageBLACK/ImagePreviewPageBLACK'; // import your ImagePreviewPageBLACK component
 
-export const App: FC = memo(function App() {
+function AppContent() {
   const [imageData, setImageData] = useState<string | null>(null);
+  const [imageFile, setImageFile] = useState<File | null>(null);
+  const [resultImageData, setResultImageData] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/dockerised-image-processing');
+  }, []); // Empty dependency array means this effect runs once on mount
+
+  useEffect(() => {
+    if (imageFile) {
+      const formData = new FormData();
+      formData.append('image', imageFile);
+      fetch('http://localhost:5000/', {
+          method: 'POST',
+          body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+          const resultImage = data.image; // Access the 'image' property of the response
+          setResultImageData(resultImage);
+        });
+    }
+  }, [imageFile]);
 
   return (
-    <div className={`${resets.clapyResets} ${classes.root}`}>
-      <FirstPage setImageData={setImageData} />
-      <ImagePreviewPageBLACK imageData={imageData} />
-      <SecondDetectionResultPageBLACK imageData={imageData} />
+    <div className="App">
+      <Routes>
+        <Route path="/dockerised-image-processing" element={<FirstPage imageData={imageData} setImageData={setImageData} setImageFile={setImageFile} />} />
+        <Route path="/image-input" element={<FirstPage imageData={imageData} setImageData={setImageData} setImageFile={setImageFile} />} />
+        <Route path="/detection-output" element={<SecondDetectionResultPageBLACK imageData={imageData} resultImageData={resultImageData} setResultImageData={setResultImageData} />} />
+        <Route path="/image-preview" element={<ImagePreviewPageBLACK imageFile={imageFile} setImageData={setImageData} setImageFile={setImageFile} />} />
+      </Routes>
     </div>
   );
-});
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+}
+
+export default App;

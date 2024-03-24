@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import type { FC } from 'react';
+import { Link } from 'react-router-dom';
 
 import resets from '../../_resets.module.css';
 import classes from './ImagePreviewPageBLACK.module.css';
@@ -7,11 +8,18 @@ import classes from './ImagePreviewPageBLACK.module.css';
 interface Props {
   className?: string;
   imageData?: string | null;
+  setImageData: React.Dispatch<React.SetStateAction<string | null>>;
+  setImageFile: React.Dispatch<React.SetStateAction<File | null>>;
+  imageFile: File | null; // Add this line
 }
 
 /* @figmaId 7:177 */
 /* @figmaId 7:177 */
-export const ImagePreviewPageBLACK: FC<Props> = memo(function ImagePreviewPageBLACK({ imageData }) {
+
+export const ImagePreviewPageBLACK: FC<Props> = memo(function ImagePreviewPageBLACK({ imageData, setImageData, setImageFile, imageFile }) {
+  if (!imageFile) {
+    return <div>No image uploaded yet.</div>;
+  } 
   return (
     <>
 
@@ -20,17 +28,33 @@ export const ImagePreviewPageBLACK: FC<Props> = memo(function ImagePreviewPageBL
         <div className={classes.frame2}>
           <div className={classes.frame3}>
             <div className={classes.dockerisedImageProcessing}>
-              <div className={classes.textBlock}>Dockerised </div>
-              <div className={classes.textBlock2}>Image Processing </div>
+            <div className={classes.textBlock}>
+              <Link to="/dockerised-image-processing">
+                Dockerised
+              </Link>
+            </div>
+            <div className={classes.textBlock2}>
+              <Link to="/image-processing">
+                Image Processing
+              </Link>
+            </div>
             </div>
             <div className={classes.dockerOPBlob}></div>
           </div>
           <div className={classes.frame1}>
-            <div className={classes.imageInput}>Image Input</div>
+          <div className={classes.imageInput}>
+          <Link to="/image-input">
+            Image Input
+          </Link>
+        </div>
             <div className={classes.imageInputBlob}></div>
           </div>
           <div className={classes.frame4}>
-            <div className={classes.detectionOutput}>Detection Output</div>
+          <div className={classes.detectionOutput}>
+          <Link to="/detection-output">
+            Detection Output
+          </Link>
+        </div>
             <div className={classes.detectionOPBlob}></div>
           </div>
         </div>
