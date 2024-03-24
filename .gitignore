@@ -2,4 +2,4 @@ flask_app/venv/
 flask_app/src/test.py
 React_app/
 FigmaDesigns/MAIN/node_modules
-.vscode
+.vscode/
