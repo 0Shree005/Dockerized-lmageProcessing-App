@@ -8,8 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def detect_cars():
 
-    img = ObjectDetection('static/highway.jpg') 
-
+    img = ObjectDetection('static/Cars.jpeg') 
 
     is_success, buffer = cv2.imencode(".jpeg", img)
 

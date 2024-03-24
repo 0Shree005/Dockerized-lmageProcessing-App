@@ -1,0 +1,177 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.frame9 {
+  position: absolute;
+  left: 120px;
+  top: 47px;
+  width: 1695.7378px;
+  height: 51px;
+  justify-content: space-between;
+}
+.frame2 {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 36px;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 561px;
+}
+.frame3 {
+  position: relative;
+  width: 251px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.dockerisedImageProcessing {
+  width: 251px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textBlock {
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.dockerOPBlob {
+  position: absolute;
+  left: 51px;
+  top: 34px;
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame1 {
+  width: 168px;
+  height: 54px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.imageInput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 148px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imageInputBlob {
+  width: 178px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+}
+.frame4 {
+  width: 220px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.detectionOutput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 220px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detectionOPBlob {
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame8 {
+  position: absolute;
+  left: calc(50% - 57px);
+  top: 36.1111%;
+  bottom: 36.2037%;
+  width: 756px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transform: translateX(-50%);
+}
+.frame6 {
+  width: 863.9252px;
+  height: 341.6895px;
+  overflow: visible;
+}
+.icon {
+  width: 100%;
+  height: 100%;
+}
+.inputBox {
+  position: absolute;
+  left: 187px;
+  top: 103px;
+  width: 513px;
+  height: 87px;
+  border-radius: 45px;
+  background-image: linear-gradient(99.6deg, #fff0 0%, #ffffff26 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  box-shadow: 0px 4px 7.8px 0px #00000040;
+}
+.frame7 {
+  position: absolute;
+  left: 333px;
+  right: 309px;
+  top: 115px;
+  width: 114px;
+  height: 58px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+.uploadImage {
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: min-content;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-direction: column;
+}

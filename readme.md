@@ -1,1 +1,0 @@
-Dockerized-lmageProcessing-App

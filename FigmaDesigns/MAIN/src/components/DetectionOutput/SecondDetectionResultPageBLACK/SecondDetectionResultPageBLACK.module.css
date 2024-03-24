@@ -1,0 +1,219 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.imageFullSize {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or fill, depending on your needs */
+  margin: 0;
+  padding: 0;
+  border-radius: 45px;
+}
+.frame9 {
+  position: absolute;
+  left: 120px;
+  top: 47px;
+  width: 1695.7378px;
+  height: 51px;
+  justify-content: space-between;
+}
+.frame2 {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 36px;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 561px;
+}
+.frame3 {
+  position: relative;
+  width: 251px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.dockerisedImageProcessing {
+  width: 251px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textBlock {
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.dockerOPBlob {
+  position: absolute;
+  left: 51px;
+  top: 34px;
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame1 {
+  width: 168px;
+  height: 54px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.imageInput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 148px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imageInputBlob {
+  width: 178px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+}
+.frame4 {
+  width: 220px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.detectionOutput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 220px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detectionOPBlob {
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame13 {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 299px;
+  height: min-content;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 276px;
+}
+.right {
+  position: relative;
+  width: 742px;
+  height: 509px;
+}
+.previewRightImageBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 509px;
+  background-color: #042931;
+  filter: blur(47.75px);
+}
+.previewRightImageGLASS {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 509px;
+  border-radius: 45px;
+  background-image: linear-gradient(124.4deg, #ffffff0f 0%, #ffffff85 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  backdrop-filter: blur(35.45000076293945px);
+}
+.mAINRightIMAGEPLACEHOLDER {
+  position: absolute;
+  left: 1.752%;
+  right: 1.8868%;
+  top: 1.5717%;
+  bottom: 1.5717%;
+  height: 493px;
+  border-radius: 45px;
+  background-color: #0f0f0f;
+  backdrop-filter: blur(35.45000076293945px);
+}
+.left {
+  position: relative;
+  width: 742px;
+  height: 509px;
+}
+.previewLeftImageBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 509px;
+  background-color: #042931;
+  filter: blur(47.75px);
+}
+.previewLeftImageGLASS {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 509px;
+  border-radius: 45px;
+  background-image: linear-gradient(124.4deg, #ffffff0f 0%, #ffffff85 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  backdrop-filter: blur(35.45000076293945px);
+}
+.mAINLEFTIMAGEPLACEHOLDER {
+  position: absolute;
+  left: 1.752%;
+  right: 1.8868%;
+  top: 1.5717%;
+  bottom: 1.5717%;
+  height: 493px;
+  border-radius: 45px;
+  background-color: #0f0f0f;
+  backdrop-filter: blur(35.45000076293945px);
+}

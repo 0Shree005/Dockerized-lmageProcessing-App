@@ -1,0 +1,171 @@
+.root {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #0f0f0f;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.frame9 {
+  position: absolute;
+  left: 120px;
+  top: 47px;
+  width: 1695.7378px;
+  height: 51px;
+  justify-content: space-between;
+}
+.frame2 {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 36px;
+  height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 561px;
+}
+.frame3 {
+  position: relative;
+  width: 251px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.dockerisedImageProcessing {
+  width: 251px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.textBlock {
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.textBlock2 {
+  margin-top: 5px;
+  color: #fff;
+  font-size: 32px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+}
+.dockerOPBlob {
+  position: absolute;
+  left: 51px;
+  top: 34px;
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame1 {
+  width: 168px;
+  height: 54px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.imageInput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 148px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imageInputBlob {
+  width: 178px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+}
+.frame4 {
+  width: 220px;
+  height: min-content;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.detectionOutput {
+  color: #fff;
+  font-size: 28px;
+  font-family: Inria Sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    'Liberation Sans', sans-serif;
+  width: 220px;
+  height: min-content;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.detectionOPBlob {
+  width: 176.8689px;
+  height: 51px;
+  border-radius: 27px;
+  background-color: #033137;
+  filter: blur(86.75px);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.frame12 {
+  position: absolute;
+  left: 449px;
+  right: 434px;
+  top: 241px;
+  height: min-content;
+  justify-content: space-around;
+  padding: 10px;
+}
+.previewImageBg {
+  width: 1017px;
+  height: 698px;
+  background-color: #042931;
+  filter: blur(47.75px);
+}
+.frame11 {
+  position: absolute;
+  left: 449px;
+  right: 434px;
+  top: 241px;
+  height: 718px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.previewImageGLASS {
+  width: 1017px;
+  height: 698px;
+  border-radius: 45px;
+  background-image: linear-gradient(124.5deg, #ffffff0f 0%, #ffffff85 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  backdrop-filter: blur(35.45000076293945px);
+}
+.frame10 {
+  position: absolute;
+  left: 466px;
+  right: 452px;
+  top: 253px;
+  height: 694px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.mAINIMAGEPLACEHOLDER {
+  width: 982px;
+  height: 674px;
+  border-radius: 45px;
+  background-color: #0f0f0f;
+  backdrop-filter: blur(35.45000076293945px);
+}
